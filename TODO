@@ -1,6 +1,6 @@
 ✔ Architecture, composants @done(20-08-24 14:08)
-☐ Lancer l'app en local
-☐ Test unitaires
+✔ Lancer l'app en local @done(20-08-24 14:29)
+✔ Test unitaires @done(20-08-24 14:29)
 ✔ Créer une archi modulaire et agile @done(20-08-24 14:07)
 ☐ install libraries (ng-bootstrap, fontawesome)
 
