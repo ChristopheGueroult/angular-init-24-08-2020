@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "crm-aout-carsat"
+    }
+  },
+  "defaultProject": "crm-aout-carsat",
+  "cli": {
+    "analytics": "a5d06fc5-9648-4cef-9499-107468a11456"
+  }
 }
