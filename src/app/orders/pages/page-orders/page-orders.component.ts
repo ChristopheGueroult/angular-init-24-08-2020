@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-orders.component.scss']
 })
 export class PageOrdersComponent implements OnInit {
-
+  public title: string;
   constructor() { }
 
   ngOnInit(): void {
+    this.title = 'All orders';
   }
 
 }
