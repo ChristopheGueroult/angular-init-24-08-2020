@@ -1,0 +1,52 @@
+{
+  "orders": [
+    {
+      "tjmHt": 5000,
+      "nbJours": 4,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "Coaching",
+      "client": "Modis",
+      "comment": "fdghd",
+      "id": 1
+    },
+    {
+      "tjmHt": 5000,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "Coaching",
+      "client": "nemesys",
+      "comment": null,
+      "id": 2
+    },
+    {
+      "tjmHt": 5000,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "formation",
+      "client": "Modis",
+      "comment": null,
+      "id": 3
+    }
+  ],
+  "clients": [
+    {
+      "state": "ACTIVE",
+      "tva": 20,
+      "id": 1,
+      "name": "Christophe2",
+      "totalCaHt": 12000,
+      "comment": "un comment pour client christophe2"
+    },
+    {
+      "state": "INACTIVE",
+      "tva": 20,
+      "id": 2,
+      "name": "Modis",
+      "totalCaHt": 120000,
+      "comment": "un comment pour client modis"
+    }
+  ]
+}

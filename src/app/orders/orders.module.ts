@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { OrdersRoutingModule } from './orders-routing.module';
 import { PageOrdersComponent } from './pages/page-orders/page-orders.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -9,7 +10,8 @@ import { PageOrdersComponent } from './pages/page-orders/page-orders.component';
   declarations: [PageOrdersComponent],
   imports: [
     CommonModule,
-    OrdersRoutingModule
+    OrdersRoutingModule,
+    SharedModule
   ]
 })
 export class OrdersModule { }

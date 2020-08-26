@@ -1,0 +1,11 @@
+@import "theme";
+@import "fonts";
+
+.text-pages {
+  h1 {
+    color: $light-color;
+    font-size: $h1-fz;
+    margin-bottom: 0;
+  }
+}
+
