@@ -13,4 +13,8 @@ export class PageOrdersComponent implements OnInit {
     this.title = 'All orders';
   }
 
+  public openPopup() {
+    console.log('ouvrir une popup');
+  }
+
 }

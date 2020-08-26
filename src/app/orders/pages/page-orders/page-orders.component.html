@@ -7,6 +7,6 @@
   <div class="content">
     <app-button route="add" label="Add an order"></app-button>
     <app-button link="http://www.google.fr" label="Google.fr"></app-button>
-    <app-button [action]="true" label="action pop"></app-button>
+    <app-button [action]="true" label="action pop" (clicked)="openPopup()"></app-button>
   </div>
 </app-template-a>
