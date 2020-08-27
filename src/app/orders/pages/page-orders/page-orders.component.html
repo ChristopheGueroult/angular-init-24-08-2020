@@ -5,8 +5,24 @@
     </app-text-bandeaux>
   </div>
   <div class="content">
+
+    <app-tableau-light *ngIf="collection" [headers]="headers">
+      <tr *ngFor="let item of collection">
+        <th>{{ item.typePresta }}</th>
+        <th>{{ item.client }}</th>
+        <th>{{ item.nbJours }}</th>
+        <th>{{ item.tjmHt }}</th>
+        <th>HT</th>
+        <th>TTC</th>
+        <th>{{ item.state }}</th>
+      </tr>
+    </app-tableau-light>
+
     <app-button route="add" label="Add an order"></app-button>
     <app-button link="http://www.google.fr" label="Google.fr"></app-button>
     <app-button [action]="true" label="action pop" (clicked)="openPopup()"></app-button>
   </div>
 </app-template-a>
+
+
+
