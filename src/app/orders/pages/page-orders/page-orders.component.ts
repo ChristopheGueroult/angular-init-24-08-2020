@@ -37,5 +37,4 @@ export class PageOrdersComponent implements OnInit {
   public openPopup() {
     console.log('ouvrir une popup');
   }
-
 }
