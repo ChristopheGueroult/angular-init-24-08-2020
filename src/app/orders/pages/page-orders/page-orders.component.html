@@ -6,7 +6,7 @@
   </div>
   <div class="content">
     <!-- {{ collection | json }} -->
-    <app-tableau-light *ngIf="collection" [headers]="headers">
+    <app-tableau-light *ngIf="collection$ | async as collection" [headers]="headers">
       <tr *ngFor="let item of collection">
         <th>{{ item.typePresta }}</th>
         <th>{{ item.client }}</th>

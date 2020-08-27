@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { OrdersService } from '../../services/orders.service';
 import { Order } from 'src/app/shared/models/order';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-page-orders',
@@ -10,9 +10,10 @@ import { Subscription } from 'rxjs';
 })
 export class PageOrdersComponent implements OnInit, OnDestroy {
   public title: string;
-  public collection: Order[];
+  // public collection: Order[];
+  public collection$: Observable<Order[]>;
   public headers: string[];
-  private sub: Subscription;
+  // private sub: Subscription;
   constructor(
     private os: OrdersService
   ) { }
@@ -28,11 +29,12 @@ export class PageOrdersComponent implements OnInit, OnDestroy {
       'State',
     ];
     this.title = 'All orders';
-    this.sub = this.os.collection.subscribe(
-      (datas) => {
-        this.collection = datas;
-      }
-    );
+    this.collection$ = this.os.collection;
+    // this.sub = this.os.collection.subscribe(
+    //   (datas) => {
+    //     this.collection = datas;
+    //   }
+    // );
   }
 
   public openPopup() {
@@ -40,6 +42,6 @@ export class PageOrdersComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.sub.unsubscribe();
+    // this.sub.unsubscribe();
   }
 }
