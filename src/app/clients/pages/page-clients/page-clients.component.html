@@ -1,1 +1,27 @@
-<p>page-clients works!</p>
+<app-template-a>
+  <div class="title">
+    <app-text-bandeaux>
+      <h1>{{ title }}</h1>
+    </app-text-bandeaux>
+  </div>
+  <div class="content">
+    <app-tableau-light *ngIf="collection$ | async as collection" [headers]="headers">
+      <tr *ngFor="let item of collection">
+        <td>{{ item.name }}</td>
+        <td>{{ item.totalCaHt }}</td>
+        <td>{{ item.tva }}</td>
+        <td>{{ item.totalCaHt | total: 1: item.tva | currency: 'EUR' }}</td>
+        <td [appState]="item.state">
+          <select (change)="changeState(item, $event)">
+            <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>
+          </select>
+        </td>
+      </tr>
+    </app-tableau-light>
+
+    <app-button route="add" label="Add a client"></app-button>
+  </div>
+</app-template-a>
+
+
+

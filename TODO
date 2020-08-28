@@ -1,22 +1,17 @@
-✔ Architecture, composants @done(20-08-24 14:08)
-✔ Lancer l'app en local @done(20-08-24 14:29)
-✔ Test unitaires @done(20-08-24 14:29)
-✔ Créer une archi modulaire et agile @done(20-08-24 14:07)
-✔ install libraries (ng-bootstrap, fontawesome) @done(20-08-24 15:34)
-☐ user interface
 
 
-Archive:
-  ✔ Architecture appli angular @started(20-08-24 11:06) @done(20-08-24 11:06) @lasted(36s)
 
+☐ Edit component avec récupérer des data à l'aide du service ActivatedRoute
+  ☐ Sur list orders ajouter une colone Action au tableau avec un icon edit pour chaque ligne
+  ☐ Quand on clique sur l'icon edit, on appel une fonction edit(item) qui redirige l'utilisateur vers la route orders/edit/1 (item.id)
+  ☐ créer le component page-edit-order
+  ☐ créer la route pour la page edit order qui prendra un paramètre id dans l'url
+  ☐ sur page-edit-component.ts, souscrire à ActivatedRoute.paramMap pour récupérer l'id passé dans l'url
+  ☐ Sur OrdersService créer la méthode getItemById(id): Observable<Order> (appel http)
+  ☐ Sur page-edit-component.ts appeler os.getItemById(id) en lui passant l'id récupérer dans ActivatedRoute.paramMap
+  ☐ Souscrire à cet observable (puisque appel http) os.getItemById(id).subscribe(...)
+  ☐ Dans le html de page-edit-component.html binder l'input FormOrderComponent.item avec l'item renvoyé par l'api
+  ☐ Dans le html de page-edit-component.html utliser l'output submited($event) pour appeler une fonction update(item)
+  ☐ Dans le ts de page-edit-component créer la fonction update(item) et qui appel this.os.update(item) (déjà créé)
+  ☐ Souscrire à cet Observable (puisque appel http) et dans le subscribe, faire une redirection vers la route orders
 
-☐ Steven 50
-☐ juju 41
-☐ seb 25
-☐ Nach 29
-☐ Guillaume 21
-☐ Kay 23
-☐ Bruno 13
-☐ Annick 14
-☐ Laurence 9
-☐ Adrien 9

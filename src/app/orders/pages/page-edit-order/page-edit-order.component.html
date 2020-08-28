@@ -1,0 +1,13 @@
+<app-template-a>
+
+  <div class="title">
+    <app-text-bandeaux>
+      <h1>{{ title }}</h1>
+    </app-text-bandeaux>
+  </div>
+
+  <div class="content">
+    <app-form-order *ngIf="item$ | async as item" [initItem]="item" (submited)="treatment($event)"></app-form-order>
+  </div>
+
+</app-template-a>
